@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav{
+    background: rgb(98,205,255, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.navlogo span{
+    color: rgb(255,100,180);
+    font-family: 'Dancing Script', cursive;
+}
+.nav-icon span{
+    font-size: 15px;
+    color: rgb(255,100,180);
+}
+span{
+    color: rgb(255,100,180);
+}
+
+
+/* product */
+.card h3{
+    padding: 50px 0;
+    font-size: 30px;
+}
+.card1{
+    padding: 30px 0;
+}
+.card{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.product{
+    font-size: 15px;
+}
+.card1 img{
+    height: 200px;
+    
+}
+
+@media (min-width: 918px) {
+    .card1{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+    .carousel-item{
+        height: 100vh;
+    }
+}
+
+/* cart */
+.cart{
+    font-size: 20px;
+    padding-left: 10px;
+}
+.cart button{
+    background: rgb(170,119,255);
+}
+.add-to-cart{
+    background: none;
+    border: none;
+    background: rgb(52, 38, 73);
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+}
+.add-to-cart:hover{
+    background: rgb(201,238,255);
+    color: black;
+}
+.delete-button{
+ padding: 0px 5px; 
+ margin: 0px 10px; 
+ color: red; 
+}
+.total{
+    padding-left: 15px;
+}
+#buy-button{
+    margin-left: 10px;
+}
+
+.cart-items li{
+    padding: 5px 0px;
+}
+.cart-item-count{
+    color: rgb(245, 71, 216);
+}
+
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(151,222,255, 0.9); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 3px 10px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 5px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+
+
+/* footer */
+
+footer{
+    background: rgb(98,205,255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+.foot-logo{
+    font-size: 25px;
+}
+.foot-logo s{
+    font-family: 'Dancing Script', cursive;
+}
+.des{
+    text-align: center;
+   padding-top: 25px;
+}
+.foo{
+    font-size: 20px;
+}

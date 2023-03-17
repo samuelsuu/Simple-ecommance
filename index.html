@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SamShop</title>
+    <!--css-->
+    <link rel="stylesheet" href="./assest/css/style.css" />
+
+    <!--AOS-->
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+
+    <!--Hover-->
+    <link rel="stylesheet" href="./node_modules/hover.css/css/hover-min.css" />
+
+    <!--Boxicon-->
+    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.css" />
+    <link rel="stylesheet" href="./assest/fontawesome/css/fontawesome.css" />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Nunito+Sans:ital,wght@1,300;1,400&family=Nunito:ital,wght@0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--navbar-->
+    <section class="nav">
+      <nav>
+        <div class="navlogo"  data-aos="zoom-in" data-aos-easing="linear"
+        data-aos-duration="700">SAM<span>SHOP</span></div>
+
+        <!-- <div class="nav-icon">
+          <i class="bx bx-cart-alt"><span class="cart-item-count">0</span></i>
+          <i class="bx bx-menu"></i>
+        </div> -->
+
+        <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul class="cart-items"></ul>
+            <p class="total">Total: $0</p>
+            <button id="buy-button" onclick="buy()">Buy</button>
+          </div>
+        </div>
+
+        <div id="main" >
+          <button class="openbtn" data-aos="fade-left" data-aos-easing="linear"
+        data-aos-duration="700" onclick="openNav()">
+            <i class="bx bx-cart-alt" ><span class="cart-item-count">0</span></i>
+          </button>
+        </div>
+      </nav>
+    </section>
+
+    <section>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assest/images/1.jpg"  class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./assest/images/2.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+          </div>
+          <div class="carousel-item">
+            <img src="./assest/images/3.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!--product-->
+    <section>
+      <div class="card">
+        <h3 data-aos="fade-up" data-aos-easing="linear"
+        data-aos-duration="1500"><span>PRO</span>DUCTS</h3>
+        <div class="card1">
+            <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/shirt-1.jpg"
+                  alt="Product Image"
+                />
+                <h4>Unisex shirt</h4>
+                <p>Cloths</p>
+                <p>Price: N300.99</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Unisex shirt"
+                  data-price="300.99"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/jacket-1.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Brown Jacket</h4>
+                <p>Cloths</p>
+                <p>Price: N200.00</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Brown Jacket"
+                  data-price="200.00"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/shoe-1.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Mens Shoe</h4>
+                <p>Shoes</p>
+                <p>Price: N250.50</p>
+                <button class="add-to-cart" data-name="Mens Shoe" data-price="250.50">
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/sports-1.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Sport Shoe</h4>
+                <p>Shoes</p>
+                <p>Price: N280.50</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Sport Shoe"
+                  data-price="280.50"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+        </div>
+       
+
+        <div class="card1">
+            <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/shirt-2.jpg"
+                  alt="Product Image"
+                />
+                <h4>Unisex Shirt</h4>
+                <p>cloths</p>
+                <p>Price: N200.99</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Unisex Shoe"
+                  data-price="200.99"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/clothes-3.jpg"
+                  height="150"
+                  alt="Female skirt"
+                />
+                <h4>Female Skirt</h4>
+                <p>Cloths</p>
+                <p>Price: N150.50</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Female Skirt"
+                  data-price="150.50"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/jacket-5.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Brown Jacket</h4>
+                <p>Cloth</p>
+                <p>Price: N350.50</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Brown Jacket"
+                  data-price="350.50"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/shorts-1.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Sport cloth</h4>
+                <p>Cloths</p>
+                <p>Price: N280.50</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Sport Shoe"
+                  data-price="280.50"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+        </div>
+
+        <div class="card1">
+            <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/clothes-2.jpg"
+                  alt="Product Image"
+                />
+                <h4>Female cloth</h4>
+                <p>Cloths</p>
+                <p>Price: N350.99</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Female cloth"
+                  data-price="350.99"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/jacket-2.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Jacket</h4>
+                <p>Cloths</p>
+                <p>Price: N200.00</p>
+                <button class="add-to-cart" data-name="Jacket" data-price="200.00">
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/party-wear-1.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Party Wear</h4>
+                <p>Shoes</p>
+                <p>Price: N350.50</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Party Wear"
+                  data-price="350.50"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+
+              <div class="product">
+                <img
+                  class="hvr-bounce-out"
+                  src="./assest/images/products/belt.jpg"
+                  height="150"
+                  alt="Product Image"
+                />
+                <h4>Nice Belt</h4>
+                <p>Belt</p>
+                <p>Price: N180.50</p>
+                <button
+                  class="add-to-cart"
+                  data-name="Nice Belt"
+                  data-price="180.50"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <hr />
+    
+        </div>
+
+    </section>
+
+    <section>
+        <footer>
+            <div class="foot">
+                <div class="foot-logo">
+                    SAM<span>SHOP</span>
+                </div>
+
+                <div class="foo">
+                    Follow Us
+                <a href="https://wa.me/09043861149"><i class='bx bxl-whatsapp' ></i></a>
+                <i class='bx bxl-facebook-circle' ></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-linkedin-square' ></i>
+
+                </div>
+                
+                <div class="des">
+                    Design by Samuel SU 
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="./assest/js/index.js"></script>
+
+    <!--Boothstap-->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--Boxicons-->
+    <script src="./node_modules/boxicons/dist/boxicons.js"></script>
+
+    <!--AOS-->
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
